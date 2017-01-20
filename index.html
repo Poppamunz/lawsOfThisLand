@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+        var img = document.createElement("img");
+        img.setAttribute("src","lawsofthisland.jpg");
+
+        function addImage() {
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - img.height) {
+                img = document.createElement("img");
+                img.setAttribute("src","lawsofthisland.jpg");
+                document.body.appendChild(img);
+            }
+        }
+
+        window.addEventListener("scroll",addImage);
+
+        document.write("<img src=\"lawsofthisland.jpg\" />");
+        document.write("<img src=\"lawsofthisland.jpg\" />");
+    </script>
+</body>
+</html>
